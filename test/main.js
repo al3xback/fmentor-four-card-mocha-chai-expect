@@ -28,15 +28,15 @@ describe('DOM', () => {
 	});
 
 	it('should have a number type of each card list image width and height attribute values', () => {
-		const cardImageElements = document.querySelectorAll('.card__image img');
+		const cardImgEls = document.querySelectorAll('.card__image img');
 
-		for (let i = 0; i < cardImageElements.length; i++) {
-			const cardImageEl = cardImageElements[i];
-			const cardImageWidth = cardImageEl.width;
-			const cardImageHeight = cardImageEl.height;
+		for (let i = 0; i < cardImgEls.length; i++) {
+			const cardImgEl = cardImgEls[i];
+			const cardImgWidth = cardImgEl.width;
+			const cardImgHeight = cardImgEl.height;
 
-			expect(cardImageWidth).to.be.a('number');
-			expect(cardImageHeight).to.be.a('number');
+			expect(cardImgWidth).to.be.a('number');
+			expect(cardImgHeight).to.be.a('number');
 		}
 	});
 
@@ -49,19 +49,19 @@ describe('DOM', () => {
 
 	it('should have two children inside of the section element', () => {
 		const sectionEl = document.querySelector('section');
-		const sectionChildrenElements = sectionEl.children;
+		const sectionChildrenEls = sectionEl.children;
 
-		expect(sectionChildrenElements).to.have.lengthOf(2);
+		expect(sectionChildrenEls).to.have.lengthOf(2);
 	});
 
 	it('should have an empty alt attribute value of each card list item image element', () => {
-		const cardItemImageElements =
+		const cardListItemImgEls =
 			document.querySelectorAll('.card__image img');
 
-		for (let i = 0; i < cardItemImageElements.length; i++) {
-			const cardItemImageAlt = cardItemImageElements[i].alt;
+		for (let i = 0; i < cardListItemImgEls.length; i++) {
+			const cardListItemImgAlt = cardListItemImgEls[i].alt;
 
-			expect(cardItemImageAlt).to.be.empty;
+			expect(cardListItemImgAlt).to.be.empty;
 		}
 	});
 });
